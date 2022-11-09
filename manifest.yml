@@ -1,16 +1,10 @@
 modules:
   jiraServiceManagement:portalProfilePanel:
-    - key: jira-service-management-portal-profile-panel-cust-hello-world-panel
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
-      title: jira-service-management-portal-profile-panel-cust
+    - key: jira-service-management-portal-profile-panel-ui-k-hello-world-panel
+      function: main
+      title: jira-service-management-portal-profile-panel-ui-k
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/f413a195-01c3-487a-85b7-dbb80c19c4b5
+  id: ari:cloud:ecosystem::app/a9f1c334-c49d-4fb2-818d-a1e2bdabff11
