@@ -1,6 +1,6 @@
 # Forge Hello World
 
-This project contains a Forge app written in JavaScript that displays `Hello World!` in a Jira service management queue page.
+This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira service management queue page. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
@@ -9,19 +9,13 @@ See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/pl
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
-- Install dependencies (inside of the `static/hello-world` directory)::
+- Install dependecies
 ```
 npm install
 ```
+- Modify your app by editing the `src/index.jsx` file.
 
-- Modify your app by editing the files in `static/hello-world/src/`.
-
-- Build your app (inside of the `static/hello-world` directory):
-```
-npm run build
-```
-
-- Deploy your app by running:
+- Build and deploy your app by running:
 ```
 forge deploy
 ```
@@ -31,12 +25,13 @@ forge deploy
 forge install
 ```
 
+- Develop your app by running `forge tunnel` to proxy invocations locally:
+```
+forge tunnel
+```
+
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.
 - Use the `forge install` command when you want to install the app on a new site.
 - Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
-
-## Support
-
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
 

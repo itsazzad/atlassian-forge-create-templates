@@ -1,15 +1,10 @@
 modules:
   jiraServiceManagement:queuePage:
-    - key: jira-service-management-queue-page-custom-ui-hello-world-page
-      resource: main
-      resolver:
-        function: resolver
-      title: jira-service-management-queue-page-custom-ui
+    - key: jira-service-management-queue-page-ui-kit-hello-world-queue-page
+      function: main
+      title: jira-service-management-queue-page-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/1ea57464-f1aa-4afb-b12b-f666631d2a2d
+  id: ari:cloud:ecosystem::app/c05f05e1-646d-4a28-aa7f-c253e2c3a166
