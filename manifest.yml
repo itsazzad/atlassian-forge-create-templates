@@ -1,10 +1,16 @@
 modules:
-  compass:teamPage:
-    - key: compass-team-page-ui-kit-hello-world-team-page
-      function: team
-      title: compass-team-page-ui-kit
+  confluence:contentAction:
+    - key: confluence-content-action-custom-ui-hello-world-content-action
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: confluence-content-action-custom-ui
   function:
-    - key: team
-      handler: team-page.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/d1dfa3a2-32fa-4f49-81d8-b57d8348d774
+  id: ari:cloud:ecosystem::app/389b50c9-fd31-4d9b-bbea-3fc011be72fb

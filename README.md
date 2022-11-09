@@ -1,8 +1,6 @@
-# Compass teamPage template (UI Kit)
+# Forge Hello World
 
-This project demonstrates the [compass:teamPage](https://developer.atlassian.com/platform/forge/manifest-reference/modules/compass-team-page/) module. It contains a Forge app written in Javascript that creates an app team page called `Hello world`, then uses [UI Kit](https://developer.atlassian.com/platform/forge/ui-kit/) to display `Hello world!` on the team page.
-
-Compass is currently in Beta. Visit [go.atlassian.com/get-compass](https://go.atlassian.com/get-compass) to get started.
+This project contains a Forge app written in Javascript that displays `Hello World!` in a Confluence content action. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
@@ -12,14 +10,14 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 
 ## Quick start
 
-- Install top-level dependencies:
+- Modify your app by editing the files in `static/hello-world/src/`.
+
+- Build your app (inside of the `static/hello-world` directory):
 ```
-npm install
+npm run build
 ```
 
-- Modify your app by editing the `src/team-page.js` file.
-
-- Build and deploy your app by running:
+- Deploy your app by running:
 ```
 forge deploy
 ```
@@ -27,11 +25,6 @@ forge deploy
 - Install your app in an Atlassian site by running:
 ```
 forge install
-```
-
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
 ```
 
 ### Notes
@@ -42,4 +35,3 @@ forge tunnel
 ## Support
 
 See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
-
