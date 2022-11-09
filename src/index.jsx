@@ -1,15 +1,21 @@
-import ForgeUI, {render, Fragment, Text, PortalSubheader} from '@forge/ui';
+import ForgeUI, { render, Text, PortalUserMenuAction, ModalDialog, useState } from '@forge/ui';
 
 const App = () => {
-    return (
-        <Fragment>
-            <Text>Hello world!</Text>
-        </Fragment>
-    );
+  const [isOpen, setOpen] = useState(true);
+
+  if (!isOpen) {
+    return null;
+  }
+
+  return (
+    <ModalDialog header="Hello" onClose={() => setOpen(false)}>
+      <Text>Hello world!</Text>
+    </ModalDialog>
+  );
 };
 
 export const run = render(
-    <PortalSubheader>
-        <App/>
-    </PortalSubheader>
+  <PortalUserMenuAction>
+    <App/>
+  </PortalUserMenuAction>
 );

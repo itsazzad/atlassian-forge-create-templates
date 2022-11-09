@@ -1,6 +1,6 @@
 {
-  "name": "jira-service-management-portal-subheader-ui-kit",
-  "version": "1.0.5",
+  "name": "jira-service-management-portal-user-menu-action-ui-kit",
+  "version": "1.0.8",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -13,6 +13,6 @@
     "eslint-plugin-react-hooks": "^4.2.0"
   },
   "dependencies": {
-    "@forge/ui": "^1.5.0"
+    "@forge/ui": "1.5.0"
   }
 }
