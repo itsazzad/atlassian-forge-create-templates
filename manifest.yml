@@ -1,15 +1,10 @@
 modules:
   jira:adminPage:
-    - key: jira-admin-page-custom-ui-hello-world-admin-page
-      resource: main
-      resolver:
-        function: resolver
-      title: jira-admin-page-custom-ui
+    - key: jira-admin-page-ui-kit-hello-world-admin-page
+      function: main
+      title: jira-admin-page-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/2c4f3c24-62dc-421b-b184-09fe35247cb0
+  id: ari:cloud:ecosystem::app/8d4e45d2-bccd-4eab-8328-fc87009029e6
