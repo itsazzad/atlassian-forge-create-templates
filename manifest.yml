@@ -1,16 +1,10 @@
 modules:
   jira:issueActivity:
-    - key: jira-issue-activity-custom-ui-hello-world-panel
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
-      title: jira-issue-activity-custom-ui
+    - key: jira-issue-activity-ui-kit-hello-world
+      function: main
+      title: jira-issue-activity-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/93767fad-2855-4c24-9e49-cbd2649ce308
+  id: ari:cloud:ecosystem::app/cfbfbf62-6390-41b1-9e58-74376f027537
