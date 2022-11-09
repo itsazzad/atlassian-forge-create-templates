@@ -1,14 +1,7 @@
 {
-  "name": "jira-ui-modifications-custom-ui",
-  "version": "1.0.3",
+  "name": "jira-workflow-condition",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
-  },
-  "dependencies": {
-    "@forge/api": "^2.8.1"
-  }
+  "private": true
 }

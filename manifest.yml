@@ -1,24 +1,22 @@
 modules:
-  jira:uiModifications:
-    - key: jira-ui-modifications-custom-ui-hello-world-ui-modifications
-      title: jira-ui-modifications-custom-ui
-      resource: uiModificationsMain
+  jira:workflowCondition:
+    - key: jira-workflow-condition-issue-has-assignee-condition
+      expression: >
+        issue.assignee != null ? true : 'non boolean - this triggers
+        avi:jira:failed:expression'
+      name: jira-workflow-condition
+      description: Issue has to be assigned, otherwise a failed Jira expression event
+        will be triggered.
   trigger:
-    - key: jira-ui-modifications-custom-ui-hello-world-ui-modifications-install
-      function: main
+    - key: jira-workflow-condition-failed-expression-trigger
+      function: listen
       events:
-        - avi:forge:installed:app
+        - avi:jira:failed:expression
   function:
-    - key: main
-      handler: index.run
-resources:
-  - key: uiModificationsMain
-    path: static/hello-world/build
+    - key: listen
+      handler: index.listen
 permissions:
   scopes:
     - manage:jira-configuration
-    - read:jira-user
-    - read:jira-work
-    - write:jira-work
 app:
-  id: ari:cloud:ecosystem::app/b685ada5-7c6a-43c1-8095-3aefebf93333
+  id: ari:cloud:ecosystem::app/035fed3b-0d55-4069-84ca-312418485d48
