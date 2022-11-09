@@ -1,8 +1,15 @@
 modules:
-  jira:projectPermission:
-    - key: jira-project-permission-forge-project-permission
-      name: jira-project-permission
-      description: Forge custom project permission
-      category: issues
+  jira:projectSettingsPage:
+    - key: jira-project-settings-page-custom-ui-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: jira-project-settings-page-custom-ui
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/829135f8-8735-4430-bd55-ae2d6ccac12c
+  id: ari:cloud:ecosystem::app/a95c174c-988e-4aef-ac72-6faa729a9d8b
