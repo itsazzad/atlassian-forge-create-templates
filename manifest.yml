@@ -1,16 +1,11 @@
 modules:
   confluence:spacePage:
-    - key: confluence-space-page-custom-ui-hello-world
-      resource: main
-      resolver:
-        function: resolver
-      title: confluence-space-page-custom-ui
+    - key: confluence-space-page-ui-kit-space-page-hello-world
+      function: main
+      title: confluence-space-page-ui-kit
       route: hello-world
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/307b0b65-b566-45b9-a439-862550a772b3
+  id: ari:cloud:ecosystem::app/460ab595-15da-4d6b-89b8-7f8a0d83f25a
