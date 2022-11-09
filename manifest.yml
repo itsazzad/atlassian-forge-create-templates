@@ -1,17 +1,15 @@
 modules:
-  jira:entityProperty:
-    - key: jira-entity-property-issue-stats-property
-      entityType: issue
-      propertyKey: stats
-      values:
-        - path: comments
-          type: number
-          searchAlias: commentCount
-        - path: statusTransitions
-          type: number
-          searchAlias: transitionCount
-        - path: lastCommenter
-          type: user
-          searchAlias: lastCommenter
+  jira:globalPage:
+    - key: jira-global-page-custom-ui-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: jira-global-page-custom-ui
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/70c731ff-5fa4-4ad6-9e90-4fb00b81413c
+  id: ari:cloud:ecosystem::app/983c6b0d-87da-4791-a9ee-104f123c83ee
