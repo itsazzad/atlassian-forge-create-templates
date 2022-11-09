@@ -1,17 +1,12 @@
 modules:
   jira:issueGlance:
-    - key: jira-issue-glance-custom-ui-hello-world-glance
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
-      title: jira-issue-glance-custom-ui
-      label: Custom UI
+    - key: jira-issue-glance-ui-kit-hello-world-glance
+      function: main
+      title: jira-issue-glance-ui-kit
+      description: A hello world issue glance.
+      label: Hello World!
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/8ea8bc99-a685-4c87-a44f-08692b790495
+  id: ari:cloud:ecosystem::app/b9af2b6a-74a0-4ac0-ab33-f2560448ce28
