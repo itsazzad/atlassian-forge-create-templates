@@ -1,10 +1,16 @@
 modules:
-  confluence:contentAction:
-    - key: confluence-content-action-ui-kit-hello-world
-      function: main
-      title: confluence-content-action-ui-kit
+  confluence:contentBylineItem:
+    - key: confluence-content-byline-custom-ui-hello-world-content-byline-item
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: confluence-content-byline-custom-ui
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/2d004e0f-2959-4865-8ab4-ed2c224a5cb3
+  id: ari:cloud:ecosystem::app/066658da-9718-4e5c-a9b2-bc4b174d50c6
