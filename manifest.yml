@@ -1,15 +1,9 @@
 modules:
   jiraServiceManagement:portalRequestViewAction:
-    - key: hello-world-portal-request-view-action
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
-      title: Hello World
+    - key: hello-world
+      function: main
+      title: Hello world
       icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
