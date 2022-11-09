@@ -1,10 +1,16 @@
 modules:
-  jira:globalPermission:
-    - key: jira-global-permission-forge-global-permission5
-      name: jira-global-permission
-      description: Forge custom global permission
-      anonymousAllowed: false
-      defaultGrants:
-        - all
+  jira:issueAction:
+    - key: jira-issue-action-custom-ui-hello-world-issue-action
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: jira-issue-action-custom-ui
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/10aa4174-17d5-4f23-b454-01c846a17f59
+  id: ari:cloud:ecosystem::app/8f201f57-f9fe-461c-b370-6a14103c42a7
