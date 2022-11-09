@@ -1,15 +1,11 @@
-import ForgeUI, { render, AdminPage, Fragment, Text } from '@forge/ui';
+import Resolver from '@forge/resolver';
 
-const App = () => {
-    return (
-        <Fragment>
-            <Text>Hello world!</Text>
-        </Fragment>
-    );
-};
+const resolver = new Resolver();
 
-export const run = render(
-    <AdminPage>
-        <App />
-    </AdminPage>
-);
+resolver.define('getText', (req) => {
+  console.log(req);
+
+  return 'Hello, world!';
+});
+
+export const handler = resolver.getDefinitions();

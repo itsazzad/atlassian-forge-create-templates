@@ -1,10 +1,20 @@
 modules:
-  jira:adminPage:
-    - key: jira-admin-page-ui-kit-hello-world-admin-page
-      function: main
-      title: jira-admin-page-ui-kit
-  function:
-    - key: main
-      handler: index.run
+  jira:customField:
+    - key: jira-custom-field-custom-ui-hello-world
+      name: jira-custom-field-custom-ui
+      description: A hello world custom field.
+      type: string
+      validation:
+        expression: value == null || !!value.match("^[A-Za-z]+$")
+        errorMessage: The value must consist only of letters
+      edit:
+        resource: main
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  content:
+    styles:
+      - unsafe-inline
 app:
-  id: ari:cloud:ecosystem::app/8d4e45d2-bccd-4eab-8328-fc87009029e6
+  id: ari:cloud:ecosystem::app/73804a2f-843f-4875-86aa-e22610722d40
