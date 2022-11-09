@@ -1,6 +1,6 @@
 # Forge Hello World
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira Service Management Organization panel. 
+This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira Service Management Portal Profile panel. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
