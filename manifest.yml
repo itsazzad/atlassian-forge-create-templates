@@ -1,12 +1,16 @@
 modules:
-  confluence:contentBylineItem:
-    - key: confluence-content-byline-ui-kit-hello-world
-      function: main
-      title: confluence-content-byline-ui-kit
-      tooltip: Hello tooltip
-      description: Displays Hello world!
+  confluence:contextMenu:
+    - key: confluence-context-menu-custom-ui-hello-world
+      title: confluence-context-menu-custom-ui
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: small
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/60b0da12-b265-4d44-8dc8-df800568647f
+  id: ari:cloud:ecosystem::app/c22a3aa1-84a7-4631-9fdc-b7e6f16c0122
