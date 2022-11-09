@@ -1,15 +1,10 @@
 modules:
   confluence:spaceSettings:
-    - key: confluence-space-settings-custom-ui-hello-world
-      resource: main
-      resolver:
-        function: resolver
-      title: confluence-space-settings-custom-ui
+    - key: confluence-space-settings-ui-kit-hello-world
+      function: main
+      title: confluence-space-settings-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/9963cb77-1ba2-4807-a5e2-130429445b5a
+  id: ari:cloud:ecosystem::app/35ae608b-3d99-4ef4-8feb-701c7e38ba8f
