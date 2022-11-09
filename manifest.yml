@@ -1,10 +1,10 @@
 modules:
-  jira:globalPage:
-    - key: jira-global-page-ui-kit-hello-world
-      function: main
-      title: jira-global-page-ui-kit
-  function:
-    - key: main
-      handler: index.run
+  jira:globalPermission:
+    - key: jira-global-permission-forge-global-permission5
+      name: jira-global-permission
+      description: Forge custom global permission
+      anonymousAllowed: false
+      defaultGrants:
+        - all
 app:
-  id: ari:cloud:ecosystem::app/e1ebb315-4b1e-48fe-9058-89526d5065be
+  id: ari:cloud:ecosystem::app/10aa4174-17d5-4f23-b454-01c846a17f59
