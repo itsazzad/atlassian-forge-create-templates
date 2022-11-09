@@ -1,11 +1,17 @@
 modules:
-  confluence:globalSettings:
-    - key: confluence-global-settings-ui-kit-global-settings-hello-world
-      function: main
-      title: confluence-global-settings-ui-kit
-      description: A hello world global settings.
+  confluence:homepageFeed:
+    - key: confluence-homepage-feed-custom-ui-homepage-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: confluence-homepage-feed-custom-ui
+      description: A hello world homepage feed.
+      viewportSize: small
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/dcf7b678-dd58-499f-bc21-89bf3556b0a7
+  id: ari:cloud:ecosystem::app/b8fff427-2a33-4988-bf1a-eb698da20349
