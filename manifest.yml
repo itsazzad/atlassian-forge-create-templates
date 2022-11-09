@@ -1,10 +1,8 @@
 modules:
-  jira:projectPage:
-    - key: jira-project-page-ui-kit-hello-world-project-page
-      function: main
-      title: jira-project-page-ui-kit
-  function:
-    - key: main
-      handler: index.run
+  jira:projectPermission:
+    - key: jira-project-permission-forge-project-permission
+      name: jira-project-permission
+      description: Forge custom project permission
+      category: issues
 app:
-  id: ari:cloud:ecosystem::app/32fd092e-5ccf-4342-a1aa-3e1313695055
+  id: ari:cloud:ecosystem::app/829135f8-8735-4430-bd55-ae2d6ccac12c
