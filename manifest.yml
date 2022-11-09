@@ -1,10 +1,24 @@
 modules:
-  jiraServiceManagement:queuePage:
-    - key: jira-service-management-queue-page-ui-kit-hello-world-queue-page
+  jira:uiModifications:
+    - key: jira-ui-modifications-custom-ui-hello-world-ui-modifications
+      title: jira-ui-modifications-custom-ui
+      resource: uiModificationsMain
+  trigger:
+    - key: jira-ui-modifications-custom-ui-hello-world-ui-modifications-install
       function: main
-      title: jira-service-management-queue-page-ui-kit
+      events:
+        - avi:forge:installed:app
   function:
     - key: main
       handler: index.run
+resources:
+  - key: uiModificationsMain
+    path: static/hello-world/build
+permissions:
+  scopes:
+    - manage:jira-configuration
+    - read:jira-user
+    - read:jira-work
+    - write:jira-work
 app:
-  id: ari:cloud:ecosystem::app/c05f05e1-646d-4a28-aa7f-c253e2c3a166
+  id: ari:cloud:ecosystem::app/b685ada5-7c6a-43c1-8095-3aefebf93333
