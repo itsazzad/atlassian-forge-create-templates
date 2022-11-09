@@ -1,10 +1,16 @@
 modules:
-  confluence:contextMenu:
-    - key: confluence-context-menu-ui-kit-hello-world
-      function: main
-      title: confluence-context-menu-ui-kit
+  confluence:globalPage:
+    - key: confluence-global-page-custom-ui-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: confluence-global-page-custom-ui
+      route: hello-world
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/27c17b62-1350-46c3-b42e-76e306f450b2
+  id: ari:cloud:ecosystem::app/d35f84ed-bdf5-4ab3-9678-7140a8baf27d
