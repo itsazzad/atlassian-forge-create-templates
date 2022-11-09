@@ -1,15 +1,10 @@
 modules:
   jira:projectSettingsPage:
-    - key: jira-project-settings-page-custom-ui-hello-world-page
-      resource: main
-      resolver:
-        function: resolver
-      title: jira-project-settings-page-custom-ui
+    - key: jira-project-settings-page-ui-kit-hello-world
+      function: main
+      title: jira-project-settings-page-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/a95c174c-988e-4aef-ac72-6faa729a9d8b
+  id: ari:cloud:ecosystem::app/c2e4a406-441d-4738-80f4-70360ae9d200

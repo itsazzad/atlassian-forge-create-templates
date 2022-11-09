@@ -9,19 +9,10 @@ See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/pl
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
-- Install dependencies (inside of the `static/hello-world` directory)::
-```
-npm install
-```
 
-- Modify your app by editing the files in `static/hello-world/src/`.
+- Modify your app by editing the `src/index.jsx` file.
 
-- Build your app (inside of the `static/hello-world` directory):
-```
-npm run build
-```
-
-- Deploy your app by running:
+- Build and deploy your app by running:
 ```
 forge deploy
 ```
@@ -29,6 +20,11 @@ forge deploy
 - Install your app in an Atlassian site by running:
 ```
 forge install
+```
+
+- Develop your app by running `forge tunnel` to proxy invocations locally:
+```
+forge tunnel
 ```
 
 ### Notes
@@ -39,4 +35,3 @@ forge install
 ## Support
 
 See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
-
