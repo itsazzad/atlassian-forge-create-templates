@@ -1,31 +1,42 @@
-# Forge "Hello, World!"
+# Forge Hello World
 
-This project contains a Forge app written in Javascript that displays "Hello, World!" in a Jira custom field. 
+This project contains a Forge app written in JavaScript that uses a background script to send events to a dashboard gadget.
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
-including the [documentation of Forge custom fields](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-custom-field). 
+See the [Forge documentation](https://developer.atlassian.com/platform/forge) to learn more about Forge.
 
 ## Requirements
 
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
+Set up Forge if you haven't already done so. For instructions, see [Getting started](https://developer.atlassian.com/platform/forge/getting-started/).
 
 ## Quick start
+- Install dependencies (inside the `static/bg-script` directory)::
+```
+npm install
+```
+- Install dependencies (inside the `static/gadget` directory)::
+```
+npm install
+```
 
-- Modify your app by editing the `src/index.jsx` file.
+- Modify your background script by editing the files in `static/bg-script/src/`.
+- Build your background script (inside the `static/bg-script` directory):
+```
+npm run build
+```
+- Modify your gadget by editing the files in `static/gadget/src/`.
+- Build your gadget (inside the `static/gadget` directory):
+```
+npm run build
+```
 
-- Build and deploy your app by running:
+- Deploy your app by running:
 ```
 forge deploy
 ```
 
-- Install your app in an Atlassian site by running:
+- Install your app on an Atlassian site by running:
 ```
 forge install
-```
-
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
 ```
 
 ### Notes
@@ -35,4 +46,4 @@ forge tunnel
 
 ## Support
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+See [Get help](https://developer.atlassian.com/platform/forge/get-help/) to get help and provide feedback.

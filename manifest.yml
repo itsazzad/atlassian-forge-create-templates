@@ -1,20 +1,17 @@
 modules:
-  jira:customField:
-    - key: jira-custom-field-ui-kit-hello-world
-      name: jira-custom-field-ui-kit
-      description: A hello world custom field.
-      type: string
-      validation:
-        expression: value == null || !!value.match("^[A-Za-z]+$")
-        errorMessage: The value must consist only of letters
-      readOnly: false
-      function: main
-      edit:
-        function: edit
-  function:
-    - key: main
-      handler: index.runView
-    - key: edit
-      handler: index.runEdit
+  jira:dashboardBackgroundScript:
+    - key: jira-dashboard-background-script-custom-ui-dashboard-bg-script
+      resource: dashBgScriptResource
+  jira:dashboardGadget:
+    - key: jira-dashboard-background-script-custom-ui-dashboard-bg-script-gadget
+      title: jira-dashboard-background-script-custom-ui
+      description: Gadget that talks with background script.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: gadgetResource
+resources:
+  - key: dashBgScriptResource
+    path: static/bg-script/build
+  - key: gadgetResource
+    path: static/gadget/build
 app:
-  id: ari:cloud:ecosystem::app/57e1572f-0383-46da-8b71-fe169d5126c6
+  id: ari:cloud:ecosystem::app/ede2b179-49a4-446f-b520-d73174800fdd
