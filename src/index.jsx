@@ -1,11 +1,9 @@
-import Resolver from '@forge/resolver';
+import ForgeUI, {render} from "@forge/ui";
 
-const resolver = new Resolver();
+import {View} from "./view";
+import {Edit} from "./edit";
+import {ContextConfig} from "./context-config";
 
-resolver.define('getText', (req) => {
-  console.log(req);
-
-  return 'Hello, world!';
-});
-
-export const handler = resolver.getDefinitions();
+export const runView = render(<View/>);
+export const runEdit = render(<Edit/>);
+export const runContextConfig = render(<ContextConfig/>);

@@ -1,25 +1,24 @@
 modules:
   jira:customFieldType:
-    - key: jira-custom-field-type-custom-ui-configurable-validation
-      name: jira-custom-field-type-custom-ui
-      description: A basic custom field with a configurable validation.
+    - key: jira-custom-field-type-ui-kit-hello-world
+      name: jira-custom-field-type-ui-kit
+      description: A hello world custom field type.
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-countries-icon.svg
       type: string
       validation:
         expression: value == null || !!value.match(configuration?.regexp || "^[A-Za-z]+$")
-        errorMessage: The value is invalid
-      contextConfig:
-        resource: main
-        layout: basic
+        errorMessage: The value must consist only of letters
+      function: main
       edit:
-        resource: edit
-resources:
-  - key: main
-    path: static/configurable-validation/build
-  - key: edit
-    path: static/edit/build
-permissions:
-  content:
-    styles:
-      - unsafe-inline
+        function: edit
+      contextConfig:
+        function: configureContext
+  function:
+    - key: main
+      handler: index.runView
+    - key: edit
+      handler: index.runEdit
+    - key: configureContext
+      handler: index.runContextConfig
 app:
-  id: ari:cloud:ecosystem::app/6af063b5-521f-4362-bb4d-ef5be799a51b
+  id: ari:cloud:ecosystem::app/31ce77ae-0b14-405c-8e7a-9a01ae08a079
