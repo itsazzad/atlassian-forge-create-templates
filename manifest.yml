@@ -1,6 +1,16 @@
 modules:
+  jiraServiceManagement:organizationPanel:
+    - key: jira-service-management-organization-panel-custom-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: jira-service-management-organization-panel-custom
   function:
-    - key: my-function
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/8f2183c1-80f5-405f-9b35-cc78ea12e013
+  id: ari:cloud:ecosystem::app/719126a1-2a6d-432b-8417-6180b407b276

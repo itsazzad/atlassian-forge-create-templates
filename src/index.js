@@ -1,7 +1,11 @@
-exports.run = (event, context) => {
-    console.log(event, context);
+import Resolver from '@forge/resolver';
 
-    return {
-        hello: "world"
-    };
-};
+const resolver = new Resolver();
+
+resolver.define('getText', (req) => {
+  console.log(req);
+
+  return 'Hello, world!';
+});
+
+export const handler = resolver.getDefinitions();
