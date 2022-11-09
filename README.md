@@ -1,21 +1,16 @@
-# Forge "Hello, World!"
+# Forge Hello World
 
-This project contains a Forge app written in Javascript that displays "Hello, World!" in a Jira dashboard gadget. 
+This project contains a Forge app that adds Jira entity properties.
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
-including the [documentation of Forge dashboard gadgets](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-dashboard-gadget). 
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
 ## Requirements
 
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
-- Install dependencies:
-```
-npm install
-```
 
-- Modify your app by editing the `src/index.jsx` file.
+- Modify your app by editing the `manifest.yml` file.
 
 - Build and deploy your app by running:
 ```

@@ -1,16 +1,17 @@
 modules:
-  jira:dashboardGadget:
-    - key: jira-dashboard-gadget-ui-kit-hello-world-gadget
-      title: jira-dashboard-gadget-ui-kit
-      description: A hello world dashboard gadget.
-      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-      function: main
-      edit:
-        function: edit
-  function:
-    - key: main
-      handler: index.runView
-    - key: edit
-      handler: index.runEdit
+  jira:entityProperty:
+    - key: jira-entity-property-issue-stats-property
+      entityType: issue
+      propertyKey: stats
+      values:
+        - path: comments
+          type: number
+          searchAlias: commentCount
+        - path: statusTransitions
+          type: number
+          searchAlias: transitionCount
+        - path: lastCommenter
+          type: user
+          searchAlias: lastCommenter
 app:
-  id: ari:cloud:ecosystem::app/d8e0d985-abe1-4be5-8929-f272057deb86
+  id: ari:cloud:ecosystem::app/70c731ff-5fa4-4ad6-9e90-4fb00b81413c
