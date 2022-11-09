@@ -1,6 +1,15 @@
 modules:
+  compass:adminPage:
+    - key: compass-admin-page-custom-ui-hello-world-admin-page
+      resource: admin
+      resolver:
+        function: admin
+      title: compass-admin-page-custom-ui
   function:
-    - key: my-function
-      handler: index.run
+    - key: admin
+      handler: admin-page.run
+resources:
+  - key: admin
+    path: static/admin-page/build
 app:
-  id: ari:cloud:ecosystem::app/8f2183c1-80f5-405f-9b35-cc78ea12e013
+  id: ari:cloud:ecosystem::app/879b46f1-64b5-42a3-a729-243d2627cbf7
