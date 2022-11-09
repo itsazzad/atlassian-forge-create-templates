@@ -1,17 +1,11 @@
 modules:
   confluence:homepageFeed:
-    - key: confluence-homepage-feed-custom-ui-homepage-hello-world
-      resource: main
-      resolver:
-        function: resolver
-      title: confluence-homepage-feed-custom-ui
+    - key: confluence-homepage-feed-ui-kit-homepage-hello-world
+      function: main
+      title: confluence-homepage-feed-ui-kit
       description: A hello world homepage feed.
-      viewportSize: small
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/b8fff427-2a33-4988-bf1a-eb698da20349
+  id: ari:cloud:ecosystem::app/1f3bcfdd-ceb5-4bc3-9c6b-864e974327f1
