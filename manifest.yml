@@ -1,16 +1,10 @@
 modules:
   confluence:contextMenu:
-    - key: confluence-context-menu-custom-ui-hello-world
-      title: confluence-context-menu-custom-ui
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: small
+    - key: confluence-context-menu-ui-kit-hello-world
+      function: main
+      title: confluence-context-menu-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/c22a3aa1-84a7-4631-9fdc-b7e6f16c0122
+  id: ari:cloud:ecosystem::app/27c17b62-1350-46c3-b42e-76e306f450b2
