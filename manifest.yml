@@ -1,10 +1,15 @@
 modules:
-  jiraServiceManagement:portalRequestDetail:
-    - key: jira-service-management-portal-request-detail-ui-hello-world-panel
-      function: main
-      title: jira-service-management-portal-request-detail-ui-
+  jiraServiceManagement:portalRequestViewAction:
+    - key: hello-world-portal-request-view-action
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Hello World
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
   function:
-    - key: main
-      handler: index.run
-app:
-  id: ari:cloud:ecosystem::app/1d9b5af5-105c-467b-8896-2457fc6e9992
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
