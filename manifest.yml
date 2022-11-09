@@ -1,16 +1,10 @@
 modules:
   confluence:contentAction:
-    - key: confluence-content-action-custom-ui-hello-world-content-action
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
-      title: confluence-content-action-custom-ui
+    - key: confluence-content-action-ui-kit-hello-world
+      function: main
+      title: confluence-content-action-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/389b50c9-fd31-4d9b-bbea-3fc011be72fb
+  id: ari:cloud:ecosystem::app/2d004e0f-2959-4865-8ab4-ed2c224a5cb3
