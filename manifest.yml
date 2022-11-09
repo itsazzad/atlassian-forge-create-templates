@@ -1,15 +1,10 @@
 modules:
   compass:globalPage:
-    - key: compass-global-page-custom-ui-hello-world-global-page
-      resource: global
-      resolver:
-        function: global
-      title: compass-global-page-custom-ui
+    - key: compass-global-page-ui-kit-hello-world-global-page
+      function: global
+      title: compass-global-page-ui-kit
   function:
     - key: global
       handler: global-page.run
-resources:
-  - key: global
-    path: static/global-page/build
 app:
-  id: ari:cloud:ecosystem::app/040db2a1-5fcb-41d8-adee-2a6e17251042
+  id: ari:cloud:ecosystem::app/b0103505-3104-4459-ac70-3ed9b9127bfe

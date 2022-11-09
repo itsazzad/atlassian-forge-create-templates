@@ -1,10 +1,13 @@
-import Resolver from '@forge/resolver';
+import ForgeUI, { render, Fragment, Text } from '@forge/ui';
 
-const resolver = new Resolver();
+const App = () => {
+  return (
+    <Fragment>
+      <Text>Hello world!</Text>
+    </Fragment>
+  );
+};
 
-resolver.define('getText', (req) => {
-  console.log(req);
-  return 'Hello world!';
-});
-
-export const run = resolver.getDefinitions();
+export const run = render(
+  <App/>
+);

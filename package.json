@@ -1,7 +1,10 @@
 {
-  "name": "compass-global-page-custom-ui",
-  "version": "1.0.5",
+  "name": "compass-global-page-ui-kit",
+  "version": "1.0.7",
+  "main": "src/index.js",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "@forge/resolver": "^1.4.6"
+    "@forge/ui": "^1.5.0"
   }
 }
