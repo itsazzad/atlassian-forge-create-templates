@@ -1,5 +1,5 @@
 {
-  "name": "jira-service-management-portal-subheader-custom-ui-static",
+  "name": "jira-service-management-portal-user-menu-action-custom-ui-static",
   "version": "0.1.4",
   "private": true,
   "homepage": ".",
@@ -7,9 +7,7 @@
     "@atlaskit/css-reset": "^6.0.1",
     "@forge/bridge": "^2.4.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
+    "react-dom": "^16.13.1",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

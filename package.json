@@ -1,6 +1,6 @@
 {
-  "name": "jira-service-management-portal-subheader-custom-ui",
-  "version": "1.0.4",
+  "name": "jira-service-management-portal-user-menu-action-custom-ui",
+  "version": "1.0.5",
   "main": "index.js",
   "license": "MIT",
   "private": true,

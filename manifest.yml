@@ -1,10 +1,11 @@
 modules:
-  jiraServiceManagement:portalSubheader:
-    - key: hello-world-panel
+  jiraServiceManagement:portalUserMenuAction:
+    - key: hello-world-portal-user-menu-action
       resource: main
       resolver:
         function: resolver
       viewportSize: medium
+      title: Hello World
   function:
     - key: resolver
       handler: index.handler
