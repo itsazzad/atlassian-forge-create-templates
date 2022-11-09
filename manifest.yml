@@ -1,22 +1,32 @@
 modules:
   jira:workflowCondition:
-    - key: jira-workflow-condition-issue-has-assignee-condition
-      expression: >
-        issue.assignee != null ? true : 'non boolean - this triggers
-        avi:jira:failed:expression'
-      name: jira-workflow-condition
-      description: Issue has to be assigned, otherwise a failed Jira expression event
-        will be triggered.
+    - key: jira-workflow-condition-custom-ui-example-workflow-condition-custom-ui-expression
+      name: jira-workflow-condition-custom-ui
+      description: A Jira workflow condition example using expression, custom UI, and
+        condition configuration.
+      expression: issue.summary.includes(config['searchString']) == true
+      view:
+        resource: custom-ui-expression
+      edit:
+        resource: custom-ui-expression
+      create:
+        resource: custom-ui-expression
   trigger:
-    - key: jira-workflow-condition-failed-expression-trigger
+    - key: jira-workflow-condition-custom-ui-failed-expression-trigger
       function: listen
       events:
         - avi:jira:failed:expression
   function:
     - key: listen
       handler: index.listen
+resources:
+  - key: custom-ui-expression
+    path: static/custom-ui-expression/build
 permissions:
   scopes:
     - manage:jira-configuration
+  content:
+    styles:
+      - unsafe-inline
 app:
-  id: ari:cloud:ecosystem::app/035fed3b-0d55-4069-84ca-312418485d48
+  id: ari:cloud:ecosystem::app/b0d92723-8713-4a4c-b879-ec19c5a4797e

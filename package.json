@@ -1,5 +1,5 @@
 {
-  "name": "jira-workflow-condition",
+  "name": "jira-workflow-condition-custom-ui",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

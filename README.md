@@ -1,38 +1,58 @@
-# Forge Hello World
+# Forge workflow condition template (custom UI)
 
-This project contains a Forge app written in Javascript that registers a workflow condition and listens to Jira events for 
-[failed expressions](https://developer.atlassian.com/platform/forge/events-reference/jira/#jira-expressions-events). 
+This project demonstrates the Jira expression condition from the [jira:workflowCondition](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-workflow-condition/)
+module, which uses [custom UI](https://developer.atlassian.com/platform/forge/custom-ui/).
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+This project contains a Forge app written in Javascript that registers a workflow condition, displays the user interface when creating,
+editing, or viewing condition configuration, and subscribes to Jira events for [failed expressions](https://developer.atlassian.com/platform/forge/events-reference/jira/#jira-expressions-events).
+
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for Forge documentation
+and tutorials.
 
 ## Requirements
 
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
+See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions on how to set up.
 
 ## Quick start
 
-- Modify the Jira expression used in the workflow condition by editing the `manifest.yml` file.
-- You can also modify `avi:jira:failed:expression` trigger function by editing the `src/index.js`.
+- Install dependencies from `package.json` (inside the root directory):
 
-- Build and deploy your app by running:
+```shell
+npm install
 ```
+
+- Install dependencies from `static/custom-ui-expression/package.json` (inside the `static/custom-ui-expression` directory):
+
+```shell
+npm install
+```
+
+- Modify your app by editing `manifest.yml`, `src/index.js`, and the files in `static/custom-ui-expression/src/` directory.
+
+- Build your app (inside the `static/custom-ui-expression` directory):
+
+```shell
+npm run build
+```
+
+- Deploy your app (inside the root directory):
+
+```shell
 forge deploy
 ```
 
-- Install your app in an Atlassian site by running:
-```
+- Install your app on an Atlassian site (inside the root directory):
+
+```shell
 forge install
 ```
 
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
-```
-
 ### Notes
+
 - Use the `forge deploy` command when you want to persist code changes.
 - Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
+- Once the app is installed on a site, the site picks up changes automatically. You don't need to rerun the `install`
+  command.
 
 ## Support
 
