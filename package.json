@@ -1,6 +1,6 @@
 {
-  "name": "jira-service-management-portal-request-create-property-panel-custom-ui",
-  "version": "1.0.2",
+  "name": "jira-service-management-portal-request-detail-custom-ui",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "private": true,

@@ -1,19 +1,16 @@
 modules:
-  jiraServiceManagement:portalRequestCreatePropertyPanel:
-    - key: jira-service-management-portal-request-create-pro-hello-world-portal-request-create-property-panel
+  jiraServiceManagement:portalRequestDetail:
+    - key: jira-service-management-portal-request-detail-cus-hello-world-panel
       resource: main
       resolver:
         function: resolver
-      viewportSize: small
+      viewportSize: medium
+      title: jira-service-management-portal-request-detail-cus
   function:
     - key: resolver
       handler: index.handler
 resources:
   - key: main
     path: static/hello-world/build
-permissions:
-  content:
-    styles:
-      - unsafe-inline
 app:
-  id: ari:cloud:ecosystem::app/e09216ff-54cc-4851-b542-ae8c100fa486
+  id: ari:cloud:ecosystem::app/8adc1657-2897-4803-98b8-a052c4e9234a
