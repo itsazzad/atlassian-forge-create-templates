@@ -1,4 +1,4 @@
-import ForgeUI, { render, Fragment, Macro, Text } from '@forge/ui';
+import ForgeUI, { render, Fragment, Macro, Text } from "@forge/ui";
 
 const App = () => {
   return (

@@ -1,11 +1,11 @@
 modules:
   macro:
-    - key: confluence-macro-typescript-ui-kit-hello-world
+    - key: confluence-macro-ui-kit-hello-world
       function: main
-      title: confluence-macro-typescript-ui-kit
+      title: confluence-macro-ui-kit
       description: Inserts Hello world!
   function:
     - key: main
       handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/91314e03-1155-47ac-88cd-7324239a5af2
+  id: ari:cloud:ecosystem::app/88923142-715d-4937-b36c-3bee1bb4ad0e
