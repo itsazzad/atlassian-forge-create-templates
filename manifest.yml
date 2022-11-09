@@ -1,15 +1,10 @@
 modules:
   compass:componentPage:
-    - key: compass-component-page-custom-ui-hello-world-component-page
-      resource: component
-      resolver:
-        function: component
-      title: compass-component-page-custom-ui
+    - key: compass-component-page-ui-kit-hello-world-component-page
+      function: component
+      title: compass-component-page-ui-kit
   function:
     - key: component
       handler: component-page.run
-resources:
-  - key: component
-    path: static/component-page/build
 app:
-  id: ari:cloud:ecosystem::app/3610c685-09b2-445b-bf4a-5a5442dd76a8
+  id: ari:cloud:ecosystem::app/8a125097-0f28-444d-9285-10950c8686dc
