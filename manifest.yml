@@ -1,10 +1,10 @@
 modules:
-  jiraServiceManagement:portalRequestDetailPanel:
-    - key: jira-service-management-portal-request-detail-pan-hello-world-panel
+  jiraServiceManagement:portalRequestDetail:
+    - key: jira-service-management-portal-request-detail-ui-hello-world-panel
       function: main
-      title: jira-service-management-portal-request-detail-pan
+      title: jira-service-management-portal-request-detail-ui-
   function:
     - key: main
       handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/8fe21615-0b09-4826-b291-a8a36e0e9cf8
+  id: ari:cloud:ecosystem::app/1d9b5af5-105c-467b-8896-2457fc6e9992
