@@ -1,20 +1,34 @@
-# Compass Data Provider Template
+# Compass globalPage template (Custom UI)
 
-This project demonstrates the Compass `dataProvider` module. It contains a Forge app written in Typescript that populates a Compass component with metrics and event when a matching link is added.
+This project demonstrates the `compass:globalPage` module. It contains a Forge app written in Javascript that creates a global page in Compass called `Hello world`, then uses [Custom UI](https://developer.atlassian.com/platform/forge/custom-ui/) to display `Hello world!` on the page.
 
-Compass is currently in Beta. See [atlassian.com/compass](https://www.atlassian.com/compass) to get access to Compass.
+Compass is currently in Beta. See [atlassian.com/compass](https://www.atlassian.com/compass) to request early access to Compass.
 
-For information about how to use this module, read [this tutorial](https://go.atlassian.com/compass-data-provider). General Forge documentation is available [here](https://developer.atlassian.com/platform/forge).
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
 ## Requirements
 
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
+- Install top-level dependencies:
+```
+npm install
+```
 
-- Modify your app by editing the `src/index.ts` file.
+- Install dependencies inside of the `static/global-page` directory:
+```
+npm install
+```
 
-- Build and deploy your app by running:
+- Modify your app by editing the files in `static/global-page/src/`.
+
+- Build your app (inside of the `static/global-page` directory):
+```
+npm run build
+```
+
+- Deploy your app by running:
 ```
 forge deploy
 ```
@@ -23,15 +37,6 @@ forge deploy
 ```
 forge install
 ```
-
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
-```
-
-- Add the link `https://test.example.com/new` to a component to see it populate with sample events and metrics!
-
----
 
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.

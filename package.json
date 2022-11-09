@@ -1,10 +1,7 @@
 {
-  "name": "compass-data-provider",
-  "version": "1.0.1",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true,
+  "name": "compass-global-page-custom-ui",
+  "version": "1.0.5",
   "dependencies": {
-    "@atlassian/forge-graphql": "^7.0.0"
+    "@forge/resolver": "^1.4.6"
   }
 }
