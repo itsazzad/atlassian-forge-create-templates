@@ -1,16 +1,11 @@
 modules:
   macro:
-    - key: confluence-macro-custom-ui-hello-world
-      resource: main
-      resolver:
-        function: resolver
-      title: confluence-macro-custom-ui
+    - key: confluence-macro-typescript-ui-kit-hello-world
+      function: main
+      title: confluence-macro-typescript-ui-kit
       description: Inserts Hello world!
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/c0a9149d-2c8e-4119-894a-979318079191
+  id: ari:cloud:ecosystem::app/91314e03-1155-47ac-88cd-7324239a5af2
