@@ -1,13 +1,13 @@
 modules:
-  scheduledTrigger:
-    - key: scheduled-trigger-scheduled-trigger-example
-      function: trigger
-      interval: hour
   webtrigger:
-    - key: scheduled-trigger-webtrigger-example
-      function: trigger
+    - key: webtrigger-sync
+      function: sync
+    - key: webtrigger-async
+      function: async
   function:
-    - key: trigger
-      handler: index.run
+    - key: sync
+      handler: index.runSync
+    - key: async
+      handler: index.runAsync
 app:
-  id: ari:cloud:ecosystem::app/84ddde12-cc78-4fe8-9ae5-6334e288292f
+  id: ari:cloud:ecosystem::app/51a5c8b2-3e3c-4176-88e4-29de5f0bdb69
