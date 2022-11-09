@@ -1,5 +1,5 @@
 {
-  "name": "jira-custom-field-custom-ui-static",
+  "name": "configurable-validation",
   "version": "0.1.5",
   "private": true,
   "homepage": ".",
@@ -7,6 +7,7 @@
     "@atlaskit/button": "^16.1.1",
     "@atlaskit/css-reset": "^6.0.1",
     "@atlaskit/form": "^8.3.1",
+    "@atlaskit/page-header": "^10.2.0",
     "@atlaskit/section-message": "^6.1.2",
     "@atlaskit/textfield": "^5.1.1",
     "@forge/bridge": "^2.4.0",

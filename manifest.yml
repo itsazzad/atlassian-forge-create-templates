@@ -1,20 +1,25 @@
 modules:
-  jira:customField:
-    - key: jira-custom-field-custom-ui-hello-world
-      name: jira-custom-field-custom-ui
-      description: A hello world custom field.
+  jira:customFieldType:
+    - key: jira-custom-field-type-custom-ui-configurable-validation
+      name: jira-custom-field-type-custom-ui
+      description: A basic custom field with a configurable validation.
       type: string
       validation:
-        expression: value == null || !!value.match("^[A-Za-z]+$")
-        errorMessage: The value must consist only of letters
-      edit:
+        expression: value == null || !!value.match(configuration?.regexp || "^[A-Za-z]+$")
+        errorMessage: The value is invalid
+      contextConfig:
         resource: main
+        layout: basic
+      edit:
+        resource: edit
 resources:
   - key: main
-    path: static/hello-world/build
+    path: static/configurable-validation/build
+  - key: edit
+    path: static/edit/build
 permissions:
   content:
     styles:
       - unsafe-inline
 app:
-  id: ari:cloud:ecosystem::app/73804a2f-843f-4875-86aa-e22610722d40
+  id: ari:cloud:ecosystem::app/6af063b5-521f-4362-bb4d-ef5be799a51b

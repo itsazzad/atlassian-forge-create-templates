@@ -46,43 +46,43 @@ function App() {
   }
 
   return (
-    <Content isIssueView={isIssueView}>
-      <Form onSubmit={onSubmit}>
-        {({formProps, dirty, submitting}) => {
-          if (isIssueView) {
+      <Content isIssueView={isIssueView}>
+        <Form onSubmit={onSubmit}>
+          {({formProps, dirty, submitting}) => {
+            if (isIssueView) {
+              return (
+                  <form {...formProps}>
+                    <FormHeader title="Edit field"/>
+                    <FormSection>
+                      {error && <SectionMessage appearance="error">{error}</SectionMessage>}
+                      <Field name="fieldValue" label="Custom field value" defaultValue={extensionData.fieldValue}>
+                        {({fieldProps}) => <TextField {...fieldProps} />}
+                      </Field>
+                    </FormSection>
+                    <FormFooter>
+                      <ButtonGroup>
+                        <Button type="submit" appearance="primary" isDisabled={!dirty || submitting}>
+                          Submit
+                        </Button>
+                        <Button appearance="subtle" onClick={view.close}>
+                          Cancel
+                        </Button>
+                      </ButtonGroup>
+                    </FormFooter>
+                  </form>
+              )
+            }
             return (
-              <form {...formProps}>
-                <FormHeader title="Edit field"/>
-                <FormSection>
+                <form {...formProps} onBlur={(event) => handleOnBlur(event, dirty)}>
                   {error && <SectionMessage appearance="error">{error}</SectionMessage>}
                   <Field name="fieldValue" label="Custom field value" defaultValue={extensionData.fieldValue}>
                     {({fieldProps}) => <TextField {...fieldProps} />}
                   </Field>
-                </FormSection>
-                <FormFooter>
-                  <ButtonGroup>
-                    <Button type="submit" appearance="primary" isDisabled={!dirty || submitting}>
-                      Submit
-                    </Button>
-                    <Button appearance="subtle" onClick={view.close}>
-                      Cancel
-                    </Button>
-                  </ButtonGroup>
-                </FormFooter>
-              </form>
+                </form>
             )
-          }
-          return (
-            <form {...formProps} onBlur={(event) => handleOnBlur(event, dirty)}>
-              {error && <SectionMessage appearance="error">{error}</SectionMessage>}
-              <Field name="fieldValue" label="Custom field value" defaultValue={extensionData.fieldValue}>
-                {({fieldProps}) => <TextField {...fieldProps} />}
-              </Field>
-            </form>
-          )
-        }}
-      </Form>
-    </Content>
+          }}
+        </Form>
+      </Content>
   );
 }
 

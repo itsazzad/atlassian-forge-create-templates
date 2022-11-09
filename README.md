@@ -1,6 +1,6 @@
-# Forge "Hello, World!"
+# Forge "Configurable validation"
 
-This project contains a Forge app written in Javascript that displays "Hello, World!" in a Jira custom field.
+This project contains a Forge app written in Javascript that validates the input value of a Jira custom field using admin-provided RegExp.
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
 including the [documentation of Forge custom fields](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-custom-field).
@@ -17,15 +17,15 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 npm install
 ```
 
-- Install dependencies (inside of the `static/hello-world` directory):
+- Install dependencies (inside of the `static/configurable-validation` directory):
 
 ```sh
 npm install
 ```
 
-- Modify your app by editing the files in `static/hello-world/src/`.
+- Modify your app by editing the files in `static/configurable-validation/src/`.
 
-- Build your app (inside of the `static/hello-world` directory):
+- Build your app (inside of the `static/onfigurable-validation` directory):
 
 ```sh
 npm run build
