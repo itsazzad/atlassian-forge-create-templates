@@ -1,11 +1,16 @@
 modules:
-  macro:
-    - key: confluence-macro-ui-kit-hello-world
-      function: main
-      title: confluence-macro-ui-kit
-      description: Inserts Hello world!
+  confluence:spacePage:
+    - key: confluence-space-page-custom-ui-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: confluence-space-page-custom-ui
+      route: hello-world
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/88923142-715d-4937-b36c-3bee1bb4ad0e
+  id: ari:cloud:ecosystem::app/307b0b65-b566-45b9-a439-862550a772b3
