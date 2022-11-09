@@ -1,23 +1,16 @@
 modules:
   jira:dashboardGadget:
-    - key: jira-dashboard-gadget-custom-ui-hello-world-gadget
-      title: jira-dashboard-gadget-custom-ui
+    - key: jira-dashboard-gadget-ui-kit-hello-world-gadget
+      title: jira-dashboard-gadget-ui-kit
       description: A hello world dashboard gadget.
       thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-      resource: main
-      resolver:
-        function: resolver
+      function: main
       edit:
-        resource: main
+        function: edit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
-permissions:
-  content:
-    styles:
-      - unsafe-inline
+    - key: main
+      handler: index.runView
+    - key: edit
+      handler: index.runEdit
 app:
-  id: ari:cloud:ecosystem::app/516f5db0-6104-4d6f-a199-334b633f8c44
+  id: ari:cloud:ecosystem::app/d8e0d985-abe1-4be5-8929-f272057deb86
