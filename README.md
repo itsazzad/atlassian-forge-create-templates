@@ -1,8 +1,9 @@
-# Forge Hello World
+# Forge "Hello, World!"
 
-This project contains a Forge app written in JavaScript that registers a `Hello, World!` custom field type in Jira. 
+This project contains a Forge app written in Javascript that displays "Hello, World!" in a Jira custom field. 
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
+including the [documentation of Forge custom fields](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-custom-field). 
 
 ## Requirements
 

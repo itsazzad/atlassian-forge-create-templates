@@ -1,24 +1,20 @@
 modules:
-  jira:customFieldType:
-    - key: jira-custom-field-type-ui-kit-hello-world
-      name: jira-custom-field-type-ui-kit
-      description: A hello world custom field type.
-      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-countries-icon.svg
+  jira:customField:
+    - key: jira-custom-field-ui-kit-hello-world
+      name: jira-custom-field-ui-kit
+      description: A hello world custom field.
       type: string
       validation:
-        expression: value == null || !!value.match(configuration?.regexp || "^[A-Za-z]+$")
+        expression: value == null || !!value.match("^[A-Za-z]+$")
         errorMessage: The value must consist only of letters
+      readOnly: false
       function: main
       edit:
         function: edit
-      contextConfig:
-        function: configureContext
   function:
     - key: main
       handler: index.runView
     - key: edit
       handler: index.runEdit
-    - key: configureContext
-      handler: index.runContextConfig
 app:
-  id: ari:cloud:ecosystem::app/31ce77ae-0b14-405c-8e7a-9a01ae08a079
+  id: ari:cloud:ecosystem::app/57e1572f-0383-46da-8b71-fe169d5126c6

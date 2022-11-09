@@ -1,9 +1,31 @@
-import ForgeUI, {render} from "@forge/ui";
+import ForgeUI, { CustomField, CustomFieldEdit, render, Text, TextField, useProductContext } from "@forge/ui";
 
-import {View} from "./view";
-import {Edit} from "./edit";
-import {ContextConfig} from "./context-config";
+const View = () => {
+  const { extensionContext: { fieldValue } } = useProductContext();
 
-export const runView = render(<View/>);
-export const runEdit = render(<Edit/>);
-export const runContextConfig = render(<ContextConfig/>);
+  return (
+    <CustomField>
+      <Text
+        content={`Hello ${fieldValue || "world"}!`}
+      />
+    </CustomField>
+  );
+};
+
+const Edit = () => {
+  const onSubmit = values => {
+      return values.text
+  };
+
+  return (
+    <CustomFieldEdit onSubmit={onSubmit}>
+      <TextField name="text" label="Say hello to:"></TextField>
+    </ CustomFieldEdit>
+  );
+}
+
+export const runView = render(
+  <View/>
+);
+
+export const runEdit = render(<Edit/>)
