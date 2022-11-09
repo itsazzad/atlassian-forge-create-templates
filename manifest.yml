@@ -1,15 +1,10 @@
 modules:
   compass:teamPage:
-    - key: compass-team-page-custom-ui-hello-world-team-page
-      resource: team
-      resolver:
-        function: team
-      title: compass-team-page-custom-ui
+    - key: compass-team-page-ui-kit-hello-world-team-page
+      function: team
+      title: compass-team-page-ui-kit
   function:
     - key: team
       handler: team-page.run
-resources:
-  - key: team
-    path: static/team-page/build
 app:
-  id: ari:cloud:ecosystem::app/c673cdb5-78c3-4fd5-ad23-0c230fc50df5
+  id: ari:cloud:ecosystem::app/d1dfa3a2-32fa-4f49-81d8-b57d8348d774

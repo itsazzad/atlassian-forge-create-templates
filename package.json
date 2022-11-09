@@ -1,14 +1,9 @@
 {
-  "name": "compass-team-page-custom-ui",
-  "version": "1.0.4",
-  "main": "index.js",
+  "name": "compass-team-page-ui-kit",
+  "version": "1.0.6",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
-  },
   "dependencies": {
-    "@forge/resolver": "^1.4.6"
+    "@forge/ui": "1.5.0"
   }
 }
