@@ -1,10 +1,15 @@
 modules:
-  compass:adminPage:
-    - key: compass-admin-page-ui-kit-hello-world-admin-page
-      function: admin
-      title: compass-admin-page-ui-kit
+  compass:componentPage:
+    - key: compass-component-page-custom-ui-hello-world-component-page
+      resource: component
+      resolver:
+        function: component
+      title: compass-component-page-custom-ui
   function:
-    - key: admin
-      handler: admin-page.run
+    - key: component
+      handler: component-page.run
+resources:
+  - key: component
+    path: static/component-page/build
 app:
-  id: ari:cloud:ecosystem::app/8119eb3e-24fc-4be1-8eb3-674323d47f19
+  id: ari:cloud:ecosystem::app/3610c685-09b2-445b-bf4a-5a5442dd76a8
