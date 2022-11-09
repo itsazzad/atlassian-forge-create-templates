@@ -1,15 +1,10 @@
 modules:
   jira:globalPage:
-    - key: jira-global-page-custom-ui-hello-world-page
-      resource: main
-      resolver:
-        function: resolver
-      title: jira-global-page-custom-ui
+    - key: jira-global-page-ui-kit-hello-world
+      function: main
+      title: jira-global-page-ui-kit
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/983c6b0d-87da-4791-a9ee-104f123c83ee
+  id: ari:cloud:ecosystem::app/e1ebb315-4b1e-48fe-9058-89526d5065be
