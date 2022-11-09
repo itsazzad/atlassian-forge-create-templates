@@ -1,10 +1,15 @@
 modules:
-  compass:globalPage:
-    - key: compass-global-page-ui-kit-hello-world-global-page
-      function: global
-      title: compass-global-page-ui-kit
+  compass:teamPage:
+    - key: compass-team-page-custom-ui-hello-world-team-page
+      resource: team
+      resolver:
+        function: team
+      title: compass-team-page-custom-ui
   function:
-    - key: global
-      handler: global-page.run
+    - key: team
+      handler: team-page.run
+resources:
+  - key: team
+    path: static/team-page/build
 app:
-  id: ari:cloud:ecosystem::app/b0103505-3104-4459-ac70-3ed9b9127bfe
+  id: ari:cloud:ecosystem::app/c673cdb5-78c3-4fd5-ad23-0c230fc50df5
