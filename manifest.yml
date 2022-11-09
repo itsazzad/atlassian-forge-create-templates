@@ -13,4 +13,4 @@ resources:
   - key: main
     path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/ee3fb1f4-5c31-48cd-b6a8-f7437ef156b8
+  id: ari:cloud:ecosystem::app/343b4579-099d-43ea-80a9-62cc2eb52874
