@@ -1,58 +1,36 @@
-# Forge workflow condition template (custom UI)
+# Forge Hello World
 
-This project demonstrates the Jira expression condition from the [jira:workflowCondition](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-workflow-condition/)
-module, which uses [custom UI](https://developer.atlassian.com/platform/forge/custom-ui/).
+This project contains a Forge app written in Javascript that validates a Jira workflow. 
 
-This project contains a Forge app written in Javascript that registers a workflow condition, displays the user interface when creating,
-editing, or viewing condition configuration, and subscribes to Jira events for [failed expressions](https://developer.atlassian.com/platform/forge/events-reference/jira/#jira-expressions-events).
-
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for Forge documentation
-and tutorials.
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
 ## Requirements
 
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions on how to set up.
+See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
 
-- Install dependencies from `package.json` (inside the root directory):
+- Modify your app by editing the `src/index.js` file.
 
-```shell
-npm install
+- Build and deploy your app by running:
 ```
-
-- Install dependencies from `static/custom-ui-expression/package.json` (inside the `static/custom-ui-expression` directory):
-
-```shell
-npm install
-```
-
-- Modify your app by editing `manifest.yml`, `src/index.js`, and the files in `static/custom-ui-expression/src/` directory.
-
-- Build your app (inside the `static/custom-ui-expression` directory):
-
-```shell
-npm run build
-```
-
-- Deploy your app (inside the root directory):
-
-```shell
 forge deploy
 ```
 
-- Install your app on an Atlassian site (inside the root directory):
-
-```shell
+- Install your app in an Atlassian site by running:
+```
 forge install
 ```
 
-### Notes
+- Develop your app by running `forge tunnel` to proxy invocations locally:
+```
+forge tunnel
+```
 
+### Notes
 - Use the `forge deploy` command when you want to persist code changes.
 - Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up changes automatically. You don't need to rerun the `install`
-  command.
+- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
 
 ## Support
 

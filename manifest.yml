@@ -1,32 +1,11 @@
 modules:
-  jira:workflowCondition:
-    - key: jira-workflow-condition-custom-ui-example-workflow-condition-custom-ui-expression
-      name: jira-workflow-condition-custom-ui
-      description: A Jira workflow condition example using expression, custom UI, and
-        condition configuration.
-      expression: issue.summary.includes(config['searchString']) == true
-      view:
-        resource: custom-ui-expression
-      edit:
-        resource: custom-ui-expression
-      create:
-        resource: custom-ui-expression
-  trigger:
-    - key: jira-workflow-condition-custom-ui-failed-expression-trigger
-      function: listen
-      events:
-        - avi:jira:failed:expression
+  jira:workflowValidator:
+    - key: jira-workflow-validator-example-workflow-validator
+      function: main
+      name: jira-workflow-validator
+      description: A Jira workflow validator example.
   function:
-    - key: listen
-      handler: index.listen
-resources:
-  - key: custom-ui-expression
-    path: static/custom-ui-expression/build
-permissions:
-  scopes:
-    - manage:jira-configuration
-  content:
-    styles:
-      - unsafe-inline
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/b0d92723-8713-4a4c-b879-ec19c5a4797e
+  id: ari:cloud:ecosystem::app/5c59d07e-1275-4822-b6be-2223e80ab345
