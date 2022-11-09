@@ -1,5 +1,5 @@
 {
-  "name": "jira-workflow-validator",
+  "name": "jira-workflow-validator-custom-ui",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

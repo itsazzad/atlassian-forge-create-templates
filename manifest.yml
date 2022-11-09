@@ -1,11 +1,35 @@
 modules:
   jira:workflowValidator:
-    - key: jira-workflow-validator-example-workflow-validator
-      function: main
-      name: jira-workflow-validator
-      description: A Jira workflow validator example.
+    - key: jira-workflow-validator-custom-ui-example-workflow-validator-custom-ui-expression
+      name: jira-workflow-validator-custom-ui
+      description: A Jira workflow validator example using expression, custom UI, and
+        validator configuration.
+      expression: issue.summary.includes(config['searchString']) == true
+      errorMessage:
+        expression: "'The transition failed because issue summary doesn\\'t include \"'
+          + config['searchString'] + '\".'"
+      view:
+        resource: custom-ui-expression
+      edit:
+        resource: custom-ui-expression
+      create:
+        resource: custom-ui-expression
+  trigger:
+    - key: jira-workflow-validator-custom-ui-failed-expression-trigger
+      function: listen
+      events:
+        - avi:jira:failed:expression
   function:
-    - key: main
-      handler: index.run
+    - key: listen
+      handler: index.listen
+resources:
+  - key: custom-ui-expression
+    path: static/custom-ui-expression/build
+permissions:
+  scopes:
+    - manage:jira-configuration
+  content:
+    styles:
+      - unsafe-inline
 app:
-  id: ari:cloud:ecosystem::app/5c59d07e-1275-4822-b6be-2223e80ab345
+  id: ari:cloud:ecosystem::app/319216e3-36b1-4070-947d-83e2f47df8a5
