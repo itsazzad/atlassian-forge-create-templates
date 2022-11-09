@@ -1,16 +1,10 @@
 modules:
   jiraServiceManagement:portalRequestDetailPanel:
     - key: jira-service-management-portal-request-detail-pan-hello-world-panel
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
+      function: main
       title: jira-service-management-portal-request-detail-pan
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/49c4b3a4-31a9-4520-bf13-25d14215e7c0
+  id: ari:cloud:ecosystem::app/8fe21615-0b09-4826-b291-a8a36e0e9cf8
