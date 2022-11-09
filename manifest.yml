@@ -1,15 +1,9 @@
 modules:
   jiraServiceManagement:portalFooter:
-    - key: jira-service-management-portal-footer-custom-ui-hello-world-panel
-      resource: main
-      resolver:
-        function: resolver
-      viewportSize: medium
+    - key: jira-service-management-portal-footer-ui-kit-hello-world-panel
+      function: main
   function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: static/hello-world/build
+    - key: main
+      handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/3122f8b2-0e88-4995-980a-b11070ca5405
+  id: ari:cloud:ecosystem::app/3241b49f-9216-4f48-b1ac-1a69a333a82b
