@@ -1,11 +1,13 @@
 modules:
-  trigger:
-    - key: product-trigger-hello-world
-      function: main
-      events:
-        - avi:jira:created:issue
+  scheduledTrigger:
+    - key: scheduled-trigger-scheduled-trigger-example
+      function: trigger
+      interval: hour
+  webtrigger:
+    - key: scheduled-trigger-webtrigger-example
+      function: trigger
   function:
-    - key: main
+    - key: trigger
       handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/da24ab93-6060-46af-ba3d-843d401da255
+  id: ari:cloud:ecosystem::app/84ddde12-cc78-4fe8-9ae5-6334e288292f
