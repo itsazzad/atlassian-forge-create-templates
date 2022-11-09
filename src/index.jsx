@@ -1,4 +1,4 @@
-import ForgeUI, {render, Fragment, Text, PortalHeader} from '@forge/ui';
+import ForgeUI, {render, Fragment, Text, PortalSubheader} from '@forge/ui';
 
 const App = () => {
     return (
@@ -9,7 +9,7 @@ const App = () => {
 };
 
 export const run = render(
-    <PortalHeader>
+    <PortalSubheader>
         <App/>
-    </PortalHeader>
+    </PortalSubheader>
 );

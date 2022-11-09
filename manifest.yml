@@ -1,9 +1,9 @@
 modules:
-  jiraServiceManagement:portalHeader:
-    - key: jira-service-management-portal-header-ui-kit-hello-world-panel
+  jiraServiceManagement:portalSubheader:
+    - key: jira-service-management-portal-subheader-ui-kit-hello-world-panel
       function: main
   function:
     - key: main
       handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/53af2b05-7346-4d81-a947-1d5a91510a12
+  id: ari:cloud:ecosystem::app/f46b8821-46ad-4abf-86f5-62e415f2fa81
