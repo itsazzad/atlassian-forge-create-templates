@@ -1,10 +1,10 @@
 {
-  "name": "compass-component-page-ui-kit",
-  "version": "1.0.7",
-  "main": "src/index.js",
+  "name": "compass-data-provider",
+  "version": "1.0.1",
+  "main": "index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@forge/ui": "^1.5.0"
+    "@atlassian/forge-graphql": "^7.0.0"
   }
 }

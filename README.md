@@ -1,10 +1,10 @@
-# Compass componentPage template (UI Kit)
+# Compass Data Provider Template
 
-This project demonstrates the Compass `componentPage` module. It contains a Forge app written in Javascript that creates a new subtab called `Hello world` on the Compass component details page, then uses [UI Kit](https://developer.atlassian.com/platform/forge/ui-kit/) to display `Hello world!` on the subtab.
+This project demonstrates the Compass `dataProvider` module. It contains a Forge app written in Typescript that populates a Compass component with metrics and event when a matching link is added.
 
-Compass is currently in Beta. See [atlassian.com/compass](https://www.atlassian.com/compass) to request early access to Compass.
+Compass is currently in Beta. See [atlassian.com/compass](https://www.atlassian.com/compass) to get access to Compass.
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+For information about how to use this module, read [this tutorial](https://go.atlassian.com/compass-data-provider). General Forge documentation is available [here](https://developer.atlassian.com/platform/forge).
 
 ## Requirements
 
@@ -12,7 +12,7 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 
 ## Quick start
 
-- Modify your app by editing the `src/component-page.js` file.
+- Modify your app by editing the `src/index.ts` file.
 
 - Build and deploy your app by running:
 ```
@@ -28,6 +28,10 @@ forge install
 ```
 forge tunnel
 ```
+
+- Add the link `https://test.example.com/new` to a component to see it populate with sample events and metrics!
+
+---
 
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.

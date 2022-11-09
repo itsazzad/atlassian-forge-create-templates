@@ -1,10 +1,32 @@
 modules:
-  compass:componentPage:
-    - key: compass-component-page-ui-kit-hello-world-component-page
-      function: component
-      title: compass-component-page-ui-kit
+  compass:dataProvider:
+    - key: compass-data-provider-data-provider
+      function: data-provider-fn
+      domains:
+        - test.example.com
+      linkTypes:
+        - chat-channel
+        - document
+        - repository
+        - dashboard
+        - on-call
+        - project
+        - other-link
+      callback:
+        function: callback-fn
   function:
-    - key: component
-      handler: component-page.run
+    - key: data-provider-fn
+      handler: index.dataProvider
+    - key: callback-fn
+      handler: index.dataProviderCallback
+permissions:
+  # For more info on scopes https://developer.atlassian.com/platform/forge/manifest-reference/permissions/
+  scopes:
+    - read:component:compass
+    - write:component:compass
+    - read:event:compass
+    - write:event:compass
+    - read:metric:compass
+    - write:metric:compass
 app:
-  id: ari:cloud:ecosystem::app/8a125097-0f28-444d-9285-10950c8686dc
+  id: ari:cloud:ecosystem::app/1224a7de-261f-4301-b091-6b30f87b8e61
