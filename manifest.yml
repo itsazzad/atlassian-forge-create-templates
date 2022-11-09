@@ -1,11 +1,17 @@
 modules:
+  jira:issueViewBackgroundScript:
+    - key: jira-issue-view-background-script-custom-ui-background-t-issue-view-background-script
+      resource: issueBgScriptResource
   jira:issuePanel:
-    - key: jira-issue-panel-ui-kit-hello-world-panel
-      function: main
-      title: jira-issue-panel-ui-kit
-      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-  function:
-    - key: main
-      handler: index.run
+    - key: jira-issue-view-background-script-custom-ui-issue-background-dashboard-background-script-gadget
+      title: jira-issue-view-background-script-custom-ui
+      viewportSize: medium
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+      resource: gadgetResource
+resources:
+  - key: issueBgScriptResource
+    path: static/bg-script/build
+  - key: gadgetResource
+    path: static/issue-panel/build
 app:
-  id: ari:cloud:ecosystem::app/dd851646-15ae-44f7-a9a0-d670ea0cc4cf
+  id: ari:cloud:ecosystem::app/82263777-3149-4ff8-8bf6-25ecc99de4bb

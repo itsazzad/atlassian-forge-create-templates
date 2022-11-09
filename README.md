@@ -1,30 +1,40 @@
 # Forge Hello World
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel. 
+This project contains a Forge app written in JavaScript that uses a background script to send events to an issue panel.
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+See the [Forge documentation](https://developer.atlassian.com/platform/forge) to learn more about Forge.
 
 ## Requirements
 
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
+Set up Forge if you haven't already done so. For instructions, see [Getting started](https://developer.atlassian.com/platform/forge/getting-started/).
 
 ## Quick start
+### Background Scripts
+- Install dependencies (inside the `bg-script` directory)::
+```
+npm install
+```
+- Modify your background script by editing the files in `bg-script/src/`.
+- Build your background script (inside the `bg-script` directory):
+```
+npm run build
+```
+### Issue panel
 
-- Modify your app by editing the `src/index.jsx` file.
+- Modify your issue panel by editing the files in `issue-panel/src/`.
+Build your issue panel (inside the `issue-panel` directory):
+```
+npm run build
+```
 
-- Build and deploy your app by running:
+- Deploy your app by running:
 ```
 forge deploy
 ```
 
-- Install your app in an Atlassian site by running:
+- Install your app on an Atlassian site by running:
 ```
 forge install
-```
-
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
 ```
 
 ### Notes
@@ -34,4 +44,4 @@ forge tunnel
 
 ## Support
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+See [Get help](https://developer.atlassian.com/platform/forge/get-help/) to get help and provide feedback.
