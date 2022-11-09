@@ -1,11 +1,14 @@
 {
-  "name": "jira-issue-view-background-script-custom-ui",
-  "version": "1.0.0",
+  "name": "jira-project-page-custom-ui",
+  "version": "1.0.5",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "dependencies": {
+    "@forge/resolver": "^1.4.6"
   }
 }

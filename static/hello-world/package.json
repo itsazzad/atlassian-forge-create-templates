@@ -1,6 +1,6 @@
 {
-  "name": "jira-issue-view-background-script-custom-ui-issue-panel",
-  "version": "0.1.0",
+  "name": "jira-project-page-custom-ui-static",
+  "version": "0.1.5",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -8,9 +8,6 @@
     "@forge/bridge": "^2.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,5 +25,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
