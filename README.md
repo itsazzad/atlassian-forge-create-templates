@@ -1,30 +1,22 @@
 # Forge Hello World
 
-This project contains a Forge app written in JavaScript that uses a background script to send events to a dashboard gadget.
+This project contains a Forge app written in JavaScript that displays `Hello World!` in a Jira dashboard gadget.
 
-See the [Forge documentation](https://developer.atlassian.com/platform/forge) to learn more about Forge.
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
 ## Requirements
 
-Set up Forge if you haven't already done so. For instructions, see [Getting started](https://developer.atlassian.com/platform/forge/getting-started/).
+See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
-- Install dependencies (inside the `static/bg-script` directory)::
-```
-npm install
-```
-- Install dependencies (inside the `static/gadget` directory)::
+- Install dependencies (inside of the `static/hello-world` directory)::
 ```
 npm install
 ```
 
-- Modify your background script by editing the files in `static/bg-script/src/`.
-- Build your background script (inside the `static/bg-script` directory):
-```
-npm run build
-```
-- Modify your gadget by editing the files in `static/gadget/src/`.
-- Build your gadget (inside the `static/gadget` directory):
+- Modify your app by editing the files in `static/hello-world/src/`.
+
+- Build your app (inside of the `static/hello-world` directory):
 ```
 npm run build
 ```
@@ -34,7 +26,7 @@ npm run build
 forge deploy
 ```
 
-- Install your app on an Atlassian site by running:
+- Install your app in an Atlassian site by running:
 ```
 forge install
 ```
@@ -46,4 +38,5 @@ forge install
 
 ## Support
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) to get help and provide feedback.
+See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+

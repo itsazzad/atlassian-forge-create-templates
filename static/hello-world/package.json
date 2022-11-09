@@ -1,10 +1,16 @@
 {
-  "name": "jira-dashboard-background-script-custom-ui-static-bg-script",
-  "version": "0.1.0",
+  "name": "jira-dashboard-gadget-custom-ui-static",
+  "version": "0.1.1",
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@forge/bridge": "^2.4.0"
+    "@atlaskit/button": "^16.1.1",
+    "@atlaskit/css-reset": "^6.0.1",
+    "@atlaskit/form": "^8.3.1",
+    "@atlaskit/textfield": "^5.1.1",
+    "@forge/bridge": "^2.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
