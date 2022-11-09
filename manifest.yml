@@ -1,11 +1,15 @@
 modules:
-  confluence:globalPage:
-    - key: confluence-global-page-ui-kit-global-page-hello-world
-      function: main
-      title: confluence-global-page-ui-kit
-      route: hello-world
+  confluence:globalSettings:
+    - key: confluence-global-settings-custom-ui-hello-world-content-byline-item
+      resource: main
+      resolver:
+        function: resolver
+      title: confluence-global-settings-custom-ui
   function:
-    - key: main
-      handler: index.run
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/d3cb4bdf-ebb8-46eb-a3ea-299217ed2b2a
+  id: ari:cloud:ecosystem::app/bdfb53e6-3b10-425a-9e84-e53a3fff9d65
